@@ -1,0 +1,193 @@
+/* Reset básico para remover margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Rolagem suave entre as âncoras */
+}
+
+/* Variáveis de Cores (Tema Claro Padrão) */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --header-bg: #2c3e50;
+    --header-text: #ffffff;
+    --accent-color: #3498db;
+    --btn-hover: #2980b9;
+}
+
+/* Classe para Tema Escuro (ativada via JS) */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --accent-color: #bb86fc;
+    --btn-hover: #985eff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--header-bg);
+    padding: 1rem 0;
+    position: sticky; /* Menu fixo no topo */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: var(--header-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--header-text);
+    color: var(--header-text);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estrutura das Seções */
+.section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+/* Cards de Formação e Projetos */
+.card, .project-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--accent-color);
+}
+
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.btn-project {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Formulário de Contato */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--btn-hover);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    margin-top: 20px;
+}
+
+/* Responsividade básica para celular */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        display: none; /* Em um projeto real, faríamos um menu hambúrguer */
+    }
+    
+    /* Para simplificar, em telas muito pequenas, o menu fica centralizado */
+    nav {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: flex;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .nav-links li {
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - [SEU NOME COMPLETO]</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Dev Data Science</div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button id="theme-toggle">🌙 Escuro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="section">
+            <h1>Olá, eu sou [SEU NOME COMPLETO]</h1>
+            <p>
+                Sou estudante de <strong>Data Science</strong> e entusiasta de tecnologia, com foco em Python e Inteligência Artificial. 
+                Atualmente estou em transição de carreira, migrando de uma sólida experiência em logística e varejo para a área de análise de dados.
+            </p>
+            <p>
+                Tenho interesse especial em <strong>Engenharia de Prompt</strong>, automação e plataformas No-Code.
+            </p>
+            <br>
+            <h3>Hobbies e Interesses</h3>
+            <ul>
+                <li>📚 Leitura (fã de Star Wars: Battlefront Twilight Company).</li>
+                <li>🧩 Resolução de puzzles lógicos e matemáticos.</li>
+                <li>💻 Projetos pessoais em Python.</li>
+            </ul>
+        </section>
+
+        <section id="formacao" class="section">
+            <h2>Formação Acadêmica</h2>
+            
+            <div class="card">
+                <h3>Tecnólogo em Data Science</h3>
+                <p><strong>Uninter</strong> | Previsão de conclusão: Junho/2027</p>
+                <p>Foco em estatística, big data e machine learning.</p>
+            </div>
+
+            <div class="card">
+                <h3>Tecnólogo em Comércio Exterior</h3>
+                <p><strong>UNIP</strong> | Concluído em 2021</p>
+            </div>
+            
+            <div class="card">
+                <h3>Cursos Complementares</h3>
+                <p>Imersão Alura & Google (IA Generativa)</p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2>Meus Projetos</h2>
+            <div class="grid-portfolio">
+                
+                <div class="project-card">
+                    <h3>Projeto Edition One</h3>
+                    <p>Desenvolvido durante imersão com Google/Alura. Focado em Engenharia de Prompt e Python.</p>
+                    <a href="#" class="btn-project">Ver Detalhes</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Agentes de IA Autônomos</h3>
+                    <p>Criação de 6 agentes para automação de rotinas em vendas, marketing e RH.</p>
+                    <a href="#" class="btn-project">Ver Detalhes</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>E-commerce Nuvemshop</h3>
+                    <p>Projeto de loja virtual focada em produtos de beleza e autocuidado.</p>
+                    <a href="#" class="btn-project">Acessar Loja</a>
+                </div>
+
+                 <div class="project-card">
+                    <h3>Educação Financeira (Extensão)</h3>
+                    <p>Projeto acadêmico voltado para letramento financeiro de idosos em Campinas.</p>
+                    <a href="#" class="btn-project">Ler Artigo</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <h2>Fale Comigo</h2>
+            <div class="contact-container">
+                <form id="form-contato">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" placeholder="exemplo@email.com">
+                        </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" rows="5" placeholder="Como posso ajudar?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Guilherme Scardazi para a disciplina de Fundamentos Web - Uninter 2025.</p>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
